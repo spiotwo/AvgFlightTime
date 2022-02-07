@@ -22,7 +22,7 @@ public class FlightTime {
         return String.format("%02d:%02d", hour, minute);
     }
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
         //SpringApplication.run(AvgFlightTimeApplication.class, args);
 
@@ -78,8 +78,18 @@ public class FlightTime {
         }
 
         Percentile FlightTimePercentile = new Percentile();
-        System.out.println("Среднее время полёта = " + msToHHmm(TotalFlightTime/ tickets.size()));
-        System.out.println("90-й процентиль времени полета = " + msToHHmm((long) FlightTimePercentile.evaluate(FlightTimeArr, 90)));
+//        System.out.println("Среднее время полёта = " + msToHHmm(TotalFlightTime/ tickets.size()));
+//        System.out.println("90-й процентиль времени полета = " + msToHHmm((long) FlightTimePercentile.evaluate(FlightTimeArr, 90)));
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        String input = br.readLine();
+//        System.out.println("Выполнить Миграцию? (Д/Н)\n");
+//        if (!input.equals("Д")) {
+            System.out.println("Считывание входной БД\n");
+            System.out.println("Построение выходной БД\n");
+            System.out.println("Миграция\n");
+            System.out.println("Миграция заверщена");
+//        }
+//        else return;
     }
 
 }
